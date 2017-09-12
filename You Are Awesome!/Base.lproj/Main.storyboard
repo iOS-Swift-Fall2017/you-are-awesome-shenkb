@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-Wx-hhB">
+                                <rect key="frame" x="16" y="20" width="343" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Nag-T7-zpt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOU-AQ-C5e">
+                                <rect key="frame" x="255" y="110" width="104" height="30"/>
+                                <state key="normal" title="Show Message">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrP-Aq-yIJ"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AdM-Wa-gJX">
+                                <rect key="frame" x="16" y="212" width="343" height="396"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVD-DC-Q9d">
+                                <rect key="frame" x="16" y="115" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tww-Vm-Qv2">
+                                <rect key="frame" x="115" y="109" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="mXP-v7-XEX"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AdM-Wa-gJX" secondAttribute="bottom" constant="59" id="Ff0-ca-dqC"/>
+                            <constraint firstItem="jbn-Wx-hhB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PPr-Za-uy2"/>
+                            <constraint firstItem="pOU-AQ-C5e" firstAttribute="top" secondItem="jbn-Wx-hhB" secondAttribute="bottom" constant="8" symbolic="YES" id="PoV-4g-Hlo"/>
+                            <constraint firstItem="pOU-AQ-C5e" firstAttribute="trailing" secondItem="AdM-Wa-gJX" secondAttribute="trailing" id="W6e-Sv-aDZ"/>
+                            <constraint firstItem="jbn-Wx-hhB" firstAttribute="trailing" secondItem="pOU-AQ-C5e" secondAttribute="trailing" id="YTL-6f-Tnm"/>
+                            <constraint firstItem="tww-Vm-Qv2" firstAttribute="leading" secondItem="vVD-DC-Q9d" secondAttribute="trailing" constant="8" symbolic="YES" id="aeY-HN-Bid"/>
+                            <constraint firstItem="jbn-Wx-hhB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fyA-rZ-AFd"/>
+                            <constraint firstItem="tww-Vm-Qv2" firstAttribute="bottom" secondItem="pOU-AQ-C5e" secondAttribute="bottom" id="l5s-aV-019"/>
+                            <constraint firstItem="jbn-Wx-hhB" firstAttribute="leading" secondItem="vVD-DC-Q9d" secondAttribute="leading" id="txr-Up-ejP"/>
+                            <constraint firstItem="AdM-Wa-gJX" firstAttribute="top" secondItem="tww-Vm-Qv2" secondAttribute="bottom" constant="72" id="uXo-7f-siA"/>
+                            <constraint firstItem="vVD-DC-Q9d" firstAttribute="centerY" secondItem="pOU-AQ-C5e" secondAttribute="centerY" id="wWn-hp-zZs"/>
+                            <constraint firstItem="jbn-Wx-hhB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="x48-XD-c6q"/>
+                            <constraint firstItem="vVD-DC-Q9d" firstAttribute="leading" secondItem="AdM-Wa-gJX" secondAttribute="leading" id="xa4-c0-7uK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="awesomeImage" destination="AdM-Wa-gJX" id="7aD-ZH-Wmk"/>
+                        <outlet property="messageLabel" destination="jbn-Wx-hhB" id="UXX-cN-mCb"/>
+                        <outlet property="soundSwitch" destination="tww-Vm-Qv2" id="do2-C5-RYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
